@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Sidebar from '../components/Sidebar'
+import Center from "../components/Center"
 
 
 export default function Home() {
@@ -15,11 +16,11 @@ export default function Home() {
       
    
 
-      <main>
-        {/*Sidebar */}
+      <main className='flex'>
+       
         <Sidebar />
-
-        {/*Center */}
+               
+        <Center />
       </main>
 
       <div>

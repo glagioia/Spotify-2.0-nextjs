@@ -11,7 +11,7 @@ function Login({ providers }) {
                 <link rel="icon" href="/SpotifyIcon.png" />
             </Head>
 
-            <img className='w-52 mb-5' src="/SpotifyIcon.png" alt="spoty logo" />
+            <img className='w-52 mb-5' src="/SpotifyIcon.png" alt="logo" />
 
             {Object.values(providers).map((provider) => (
                 <div key={provider.name}>
