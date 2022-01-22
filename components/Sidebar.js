@@ -19,7 +19,7 @@ function Sidebar() {
     const [playlists, setPlaylists] = useState([]);
     const [playlistId, setPlaylistId] = useRecoilState(playlistIdState);
 
-    console.log("you picked", playlistId)
+    // console.log("you picked", playlistId)
 
     useEffect(() => {
         if (spotifyApi.getAccessToken()) {
@@ -29,7 +29,7 @@ function Sidebar() {
         }
     }, [session, spotifyApi])
 
-    console.log(playlists)
+    // console.log(playlists)
 
 
 

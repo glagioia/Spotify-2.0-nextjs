@@ -8,19 +8,20 @@ function Song({ order, track }) {
     const [currentTrackId, setCurrentTrackId] = useRecoilState(currentTrackIdState);
     const [isPlaying, setIsPlaying] = useRecoilState(isPlayingState);
 
-    const playSong = () => {
-        setCurrentTrackId(track.track.id);
-        setIsPlaying(true);
+     const playSong = () => {
+        setCurrentTrackId(track?.track?.id)
+        setIsPlaying(true)
         spotifyApi.play({
-            uris: [track.track.uri],
-        });    
+            uris: [track.track.uri]
+        })
     }
 
-    console.log(currentTrackId, isPlaying, "soy current track id y is playing")
+    
+    
     
 
     return (
-        <div className="grid grid-cols-2 text-gray-500 py-4 px-5 hover:bg-gray-900 cursor-pointer" >
+        <div className="grid grid-cols-2 text-gray-500 py-4 px-5 hover:bg-gray-900 cursor-pointer"  >
             <div className="flex items-center space-x-4" >
                 <p>{order + 1}</p>
                 <img className="h-10 w-10" src={track.track.album.images[0].url} alt="" />
